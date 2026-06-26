@@ -3,8 +3,7 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vite';
 
-// Ganti 'fluent-docs' dengan nama repo GitHub kamu
-const REPO_NAME = 'fluent-docs';
+const REPO_NAME = 'Fluent-Modded-Docs';
 
 export default defineConfig({
   base: process.env.NODE_ENV === 'production' ? `/${REPO_NAME}/` : '/',
