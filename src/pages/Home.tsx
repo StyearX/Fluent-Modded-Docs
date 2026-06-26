@@ -4,6 +4,7 @@ import { ArrowRight, Terminal, Zap, Package, Palette } from "lucide-react";
 import { CodeBlock } from "@/components/ui/CodeBlock";
 import { T } from "@/contexts/LanguageContext";
 import planetLogo from "@assets/1000795637-removebg-preview_1782449270662.png";
+import ashGrayScreenshot from "@assets/Ash Gray.png";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
             v1.4.1 <T en="is now available" id="sudah tersedia" />
           </div>
           <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-foreground">
-            Fluent<span className="text-primary">Modded</span>
+            fluent<span className="text-primary">Pro</span>
           </h1>
           <p className="max-w-[700px] text-lg text-muted-foreground md:text-xl leading-relaxed">
             <T
@@ -107,134 +108,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FluentPro UI Preview — faithful Ash Gray mockup */}
+      {/* FluentPro UI Preview — real Ash Gray screenshot */}
       <section className="mt-4">
         <h2 className="text-2xl font-bold mb-6">
           <T en="Experience the UI" id="Rasakan UI-nya" />
         </h2>
 
-        {/* Window frame — Ash Gray theme */}
-        <div
-          className="relative rounded-xl overflow-hidden shadow-2xl shadow-black/40 border border-[#3C3C48] select-none max-w-[580px] mx-auto"
-          style={{ background: "#2A2A32", fontFamily: "var(--app-font-sans)" }}
-        >
-          {/* ── Title bar ── */}
-          <div className="flex items-center px-3 py-2.5 border-b border-[#3C3C48]" style={{ background: "#2F2F3A" }}>
-            <img src={planetLogo} alt="FluentPro logo" className="w-5 h-5 mr-2 opacity-90" />
-            <span className="text-white text-sm font-semibold mr-1">FluentPro</span>
-            <span className="text-[#8A8AA0] text-sm">Full Showcase</span>
-            <div className="ml-auto flex items-center gap-2">
-              <div className="flex items-center gap-1 border border-[#4C4C5A] rounded px-2 py-0.5">
-                <span className="text-[10px] text-[#A0A0B0]">📱</span>
-                <span className="text-[10px] text-[#A0A0B0]">Mobile</span>
-              </div>
-              <div className="flex items-center gap-1.5 ml-1">
-                <div className="w-3 h-3 rounded-full bg-[#3C3C48] hover:bg-[#4C4C5A]" />
-                <div className="w-3 h-3 rounded-full bg-[#3C3C48] hover:bg-[#4C4C5A]" />
-                <div className="w-3 h-3 rounded-full bg-[#ff5f57]/80 hover:bg-[#ff5f57]" />
-              </div>
-            </div>
-          </div>
-
-          {/* ── Body ── */}
-          <div className="flex" style={{ minHeight: 360 }}>
-            {/* Sidebar */}
-            <div className="w-40 flex flex-col border-r border-[#3C3C48] shrink-0" style={{ background: "#2F2F3A" }}>
-              {/* Planet logo */}
-              <div className="flex justify-center pt-5 pb-3">
-                <img src={planetLogo} alt="Logo" className="w-14 h-14 opacity-90" />
-              </div>
-
-              {/* User info */}
-              <div className="mx-2 mb-3 rounded-lg border border-[#3C3C48] p-2.5 flex items-center gap-2" style={{ background: "#35353F" }}>
-                <div className="w-8 h-8 rounded-full bg-[#4C4C5A] flex items-center justify-center shrink-0 overflow-hidden">
-                  <span className="text-[10px] text-[#8A8AA0]">👤</span>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="text-xs font-semibold" style={{ color: "#e05555" }}>Welcome</div>
-                  <div className="text-[10px]" style={{ color: "#8A8AA0" }}>@5/api</div>
-                </div>
-                <div className="text-[#8A8AA0] text-xs">👁</div>
-              </div>
-
-              {/* Search */}
-              <div className="mx-2 mb-3 rounded border border-[#3C3C48] flex items-center gap-1.5 px-2 py-1.5" style={{ background: "#2A2A35" }}>
-                <span className="text-[#8A8AA0] text-xs">🔍</span>
-                <span className="text-[10px] text-[#8A8AA0]">Search...</span>
-              </div>
-
-              {/* Tabs */}
-              <div className="flex-1 overflow-y-auto px-1.5 space-y-0.5">
-                {[
-                  { icon: "≡", label: "Elements",   active: false },
-                  { icon: "⚙", label: "Settings",   active: true  },
-                  { icon: "⊞", label: "Components", active: false },
-                  { icon: "✦", label: "Icons",      active: false },
-                  { icon: "⊞", label: "Floating",   active: false },
-                ].map((tab) => (
-                  <div
-                    key={tab.label}
-                    className="flex items-center gap-2 px-2 py-1.5 rounded-md transition-colors relative"
-                    style={{
-                      background: tab.active ? "#3C3C48" : "transparent",
-                      borderLeft: tab.active ? "2px solid #A0A0B0" : "2px solid transparent",
-                    }}
-                  >
-                    <span className="text-xs" style={{ color: tab.active ? "#E0E0F0" : "#8A8AA0" }}>{tab.icon}</span>
-                    <span className="text-xs flex-1" style={{ color: tab.active ? "#E0E0F0" : "#8A8AA0" }}>{tab.label}</span>
-                    {/* Bookmark icon */}
-                    <svg className="w-3 h-3" viewBox="0 0 16 16" fill={tab.active ? "#D4A017" : "none"} stroke={tab.active ? "#D4A017" : "#8A8AA0"} strokeWidth="1.5">
-                      <path d="M3 2h10v12l-5-3-5 3V2z" />
-                    </svg>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Content — Settings page */}
-            <div className="flex-1 overflow-y-auto p-4" style={{ background: "#2A2A32" }}>
-              <h2 className="text-lg font-bold mb-3" style={{ color: "#E0E0F0" }}>Settings</h2>
-
-              {/* Section header */}
-              <div className="flex items-center gap-2 mb-3">
-                <span className="text-xs" style={{ color: "#8A8AA0" }}>🖥</span>
-                <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: "#8A8AA0" }}>Interface</span>
-              </div>
-
-              {/* Setting rows */}
-              <div className="space-y-1.5">
-                {/* Theme dropdown */}
-                <div className="rounded-lg px-3 py-2.5 flex items-center justify-between border border-[#3C3C48]" style={{ background: "#2A2A35" }}>
-                  <div>
-                    <div className="text-xs font-medium" style={{ color: "#E0E0F0" }}>Theme</div>
-                    <div className="text-[10px]" style={{ color: "#8A8AA0" }}>Changes the interface theme.</div>
-                  </div>
-                  <div className="flex items-center gap-1.5 rounded border border-[#3C3C48] px-2 py-1" style={{ background: "#35353F" }}>
-                    <span className="text-xs" style={{ color: "#E0E0F0" }}>Ash Gray</span>
-                    <span className="text-[10px]" style={{ color: "#8A8AA0" }}>▾</span>
-                  </div>
-                </div>
-
-                {/* Toggles */}
-                {[
-                  { label: "Animated Window",      desc: "Enables shine/stroke animation on theme." },
-                  { label: "Transparency",          desc: "Makes the interface transparent." },
-                  { label: "Disable Background Images", desc: "Hides theme background images." },
-                  { label: "Acrylic",               desc: "Requires Roblox graphics quality 8+." },
-                ].map((row) => (
-                  <div key={row.label} className="rounded-lg px-3 py-2.5 flex items-center justify-between border border-[#3C3C48]" style={{ background: "#2A2A35" }}>
-                    <div>
-                      <div className="text-xs font-medium" style={{ color: "#E0E0F0" }}>{row.label}</div>
-                      <div className="text-[10px]" style={{ color: "#8A8AA0" }}>{row.desc}</div>
-                    </div>
-                    {/* Toggle — on state */}
-                    <div className="relative w-8 h-4 rounded-full shrink-0" style={{ background: "#3C3C48" }}>
-                      <div className="absolute right-0.5 top-0.5 w-3 h-3 rounded-full" style={{ background: "#A0A0B0" }} />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+        <div className="relative mx-auto max-w-[640px]">
+          {/* Subtle glow behind the screenshot */}
+          <div
+            className="absolute inset-0 rounded-2xl blur-2xl opacity-30 pointer-events-none"
+            style={{ background: "radial-gradient(ellipse at 50% 60%, #6366f1 0%, transparent 70%)" }}
+          />
+          <img
+            src={ashGrayScreenshot}
+            alt="fluentPro — Ash Gray theme screenshot"
+            className="relative w-full h-auto rounded-2xl shadow-2xl shadow-black/60 select-none"
+            draggable={false}
+          />
+          {/* Badge */}
+          <div className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full border border-border/40 bg-background/80 backdrop-blur px-3 py-1 text-xs font-medium text-muted-foreground shadow">
+            <span className="w-2 h-2 rounded-full bg-primary inline-block" />
+            Ash Gray theme
           </div>
         </div>
       </section>
