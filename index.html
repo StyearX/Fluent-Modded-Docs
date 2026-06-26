@@ -3,19 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Fluent-Modded Docs</title>
-    <meta name="description" content="Fluent-Modded Docs — built on Replit. Update this description to reflect the app." />
+    <title>fluentPro Docs</title>
+    <meta name="description" content="fluentPro — A precise, modern, and dark-tech UI library for Roblox exploit scripts. 19 built-in themes, solar icon support, and comprehensive elements." />
     <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Fluent-Modded Docs" />
-    <meta property="og:description" content="Fluent-Modded Docs — built on Replit. Update this description to reflect the app." />
+    <meta property="og:title" content="fluentPro Docs" />
+    <meta property="og:description" content="fluentPro — A precise, modern, and dark-tech UI library for Roblox exploit scripts. 19 built-in themes, solar icon support, and comprehensive elements." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Fluent-Modded Docs" />
-    <meta name="twitter:description" content="Fluent-Modded Docs — built on Replit. Update this description to reflect the app." />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="twitter:title" content="fluentPro Docs" />
+    <meta name="twitter:description" content="fluentPro — A precise, modern, and dark-tech UI library for Roblox exploit scripts. 19 built-in themes, solar icon support, and comprehensive elements." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      (function() {
+        var qs = window.location.search;
+        if (qs) {
+          var match = qs.match(/[?&]p=([^&]*)/);
+          if (match) {
+            var p = '/' + match[1].replace(/~and~/g, '&');
+            var rest = qs.replace(/[?&]p=[^&]*/, '').replace(/[?&]q=([^&]*)/, '?$1');
+            history.replaceState(null, null, p + rest + window.location.hash);
+          }
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
